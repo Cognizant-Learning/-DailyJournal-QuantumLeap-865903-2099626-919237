@@ -614,4 +614,41 @@ Using NgRx for state management:
 - User behavior analytics (opt-in)
 - Health check endpoints
 
+## Spring Boot Project Structure Generation
+
+To create the base project structure for the backend API using Java Spring Boot, run the following command (replace `com.example.dailyjournal` with your desired package name):
+
+```sh
+mvn archetype:generate -DgroupId=com.example.dailyjournal -DartifactId=dailyjournal-backend -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+```
+
+Or, use [Spring Initializr](https://start.spring.io/) with these settings:
+- Project: Maven Project
+- Language: Java
+- Spring Boot: 3.x
+- Group: `com.example.dailyjournal`
+- Artifact: `dailyjournal-backend`
+- Dependencies: Spring Web, Spring Security, Spring Data JPA, MySQL Driver, Lombok, Validation, Spring Boot DevTools, JWT, Spring Boot Actuator
+
+After downloading/unzipping, your structure will look like:
+
+```
+dailyjournal-backend/
+├── src/
+│   ├── main/
+│   │   ├── java/com/example/dailyjournal/
+│   │   │   ├── controller/
+│   │   │   ├── model/
+│   │   │   ├── repository/
+│   │   │   ├── service/
+│   │   │   └── DailyjournalBackendApplication.java
+│   │   └── resources/
+│   │       ├── application.properties
+│   │       └── static/
+│   └── test/
+│       └── java/com/example/dailyjournal/
+├── pom.xml
+└── README.md
+```
+
 This technical design provides a comprehensive blueprint for implementing the Daily Journal & Mood Analyzer application using Java 21, Angular 20, MySQL, REST APIs, and Bootstrap.
